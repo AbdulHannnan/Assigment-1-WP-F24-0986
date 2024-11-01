@@ -1,0 +1,334 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    position: relative;
+    background-color: black;
+    overflow: hidden;
+
+    overflow-y: scroll;
+}
+
+.fade1 , .fade2{
+    content: " ";
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: linear-gradient(160deg , #14a2cd , #ff00b7);
+    position: absolute;
+    top: -100px;
+    left: -20px;
+    filter: blur(150px);
+    z-index: -100;
+}
+.fade2{
+    top: 350px;
+    left: 800px;
+    height: 450px;
+    width: 450px;
+    filter: blur(250px);
+}
+header nav{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    font-size: 35px;
+    font-weight: 550;
+    color: white;
+}
+nav ul{
+    display: flex;
+    /* flex-direction: row; */
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    letter-spacing: 2px;
+    /* position: relative; */
+}
+ul li a::after{
+    content: " ";
+    width: 0%;
+    height: 1px;
+    background: white;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: .3s;
+}
+ul li a:hover{
+    color: #ffa200;
+    font-size: 30px;
+    transition-duration: 1s;
+}
+ul li a:hover::after{
+    width: 100%;
+
+}
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+     height: auto;
+}
+.hero-left{
+    width: 50%;
+    padding-left: 10%;
+}
+.hero-left h1{
+    color: white;
+    font-size: 55px;
+}
+.hero-left h1 span:first-child{
+    background: linear-gradient(19deg , #ffa200 , #ff4949);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero-left h1 span:last-child{
+    background: linear-gradient(19deg , #8b5cf6 , #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero-left p{
+    color: white;
+    font-size: 22px;
+    margin: 20px 0 30px 0;
+    line-height: 38px;
+}
+.hero-left button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 50px;
+    font-size: 18px;
+    background: #ffa200;
+    color: white;
+    border: 1px solid #ff4949;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 25px;
+}
+.hero-left button:hover{
+    background: transparent;
+    color: #ffa200;
+    transition-duration: .7s;
+    size: 55px;
+    font-size: 25px;
+}
+.hero img{
+    filter: contrast(1.1);
+    padding-right: 10%;
+    width: 800px; /* Adjust the width as needed */
+    height: auto;
+}
+.zero-item{
+    display: flex;
+    flex-direction: column;
+    size: 10%;
+}
+footer{
+    padding-top: 20px;
+    background-color: #343434;
+    
+    
+}
+.ft-container{
+    width: 100%;
+    /* margin: auto; */
+    display: flex;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+}
+.footer{
+    width: 100%;
+}
+.footer-content h3{
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: white;
+}
+.footer-content p{
+    width: 190px;
+    margin: auto;
+    padding: 7px;
+    color: white;
+}
+.footer-content ul{
+    text-align: center;
+}
+.footer-content li{
+    width: auto;
+    text-align: center;
+    list-style-type: none;
+    padding: 7px;
+    position: relative;
+}
+.footer-content li::before{
+    content: "";
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 20px;
+    background: #ffa200;
+    transition-duration: .5s;
+}
+.footer-content li:hover::before{
+    width: 70px;
+}
+.Social-links{
+    text-align: center;
+    padding: 0;
+}
+.Social-links h3{
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: white;
+}
+.Social-links li{
+    display: inline;
+    text-align: center;
+    padding: 5px;
+
+}
+.Social-links i{
+    color: white;
+    font-size: 25px;
+}
+footer a{
+    text-decoration: none;
+}
+footer a:hover{
+    color: #ffa200;
+}
+.Social-links i:hover{
+    color: #ffa200;
+    font-size: 40px;
+    transition-duration: .5s;
+
+}
+.bottom{
+    background-color: #ffa200;
+    color: black;
+    padding: 7px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (max-width: 1199px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .hero-left {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+    .hero img {
+        width: 100%;
+        padding: 0;
+    }
+    .ft-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .footer-content p {
+        width: 100%;
+    }
+}
+
+/* Mobile */
+/* @media (max-width: 767px) {
+    .logo {
+        font-size: 24px;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero-left h1 {
+        font-size: 36px;
+    }
+    .hero-left p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .hero-left button {
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+    .hero img {
+        width: 100%;
+    }
+    .ft-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .Social-links i {
+        font-size: 30px;
+    }
+    .bottom {
+        font-size: 14px;
+    }
+} 
+
+/* Hamburger icon style */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+}
+
+.hamburger i {
+    color: white;
+}
+
+/* Responsive Navigation */
+@media (max-width: 767px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        z-index: 1;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* Display nav links when hamburger is clicked */
+    nav ul.active {
+        display: flex;
+    }
+}
